@@ -1,0 +1,104 @@
+<div class="admin-panel rtl text-right">
+  <div class="container">
+    <div class="add-role">
+      <h2 class="mt-5 mb-3 text-center l" style="font-size: 30px">
+        إضافة موظّف
+      </h2>
+
+      <form (ngSubmit)="addEmployee(newEmployeeForm)" #newEmployeeForm="ngForm">
+        <div class="form-group mt-5">
+          <label for="name">اسم الموظّف</label>
+          <input
+            ngModel
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            aria-describedby="name"
+            placeholder="اسم الموظّف"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="mobile">رقم الموبيل</label>
+          <input
+            ngModel
+            type="number"
+            name="mobile"
+            class="form-control"
+            id="mobile"
+            placeholder="رقم الموبيل"
+          />
+        </div>
+
+        <div class="form-group mt-5">
+          <label for="email">إيميل الموظّف</label>
+          <input
+            ngModel
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            aria-describedby="email"
+            placeholder="إيميل الموظّف"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="password">كلمة المرور</label>
+          <input
+            ngModel
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="كلمة المرور"
+          />
+        </div>
+
+        <div class="form-check">
+          <input
+            ngModel
+            class="form-check-input"
+            type="radio"
+            name="job"
+            id="delivery-man"
+            value="delivery-man"
+          />
+          <label class="form-check-label mr-4" for="delivery-man">
+            مسؤول توصيل
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            ngModel
+            class="form-check-input"
+            type="radio"
+            name="job"
+            id="facebook-admin"
+            value="facebook-admin"
+          />
+          <label class="form-check-label mr-4" for="facebook-admin">
+            أدمن صفحة الفيسبوك
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            ngModel
+            class="form-check-input"
+            type="radio"
+            name="job"
+            id="system-admin"
+            value="system-admin"
+          />
+          <label class="form-check-label mr-4" for="system-admin">
+            مدير للنظام
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">
+          إضافة الموظّف
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
